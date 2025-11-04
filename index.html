@@ -4,12 +4,203 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="CV of Hakim Aliyev, iOS Developer, Azerbaijan." />
-  <meta name="keywords" content="Hakim Aliyev, CV, iOS, Swift, SwiftUI, UIKit, CloudKit" />
   <meta name="author" content="Hakim Aliyev" />
   <title>Hakim Aliyev — CV</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&display=swap" rel="stylesheet">
+
+  <style>
+   
+    html {
+      font-size: 16px;           
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.7;         
+      color: #111;              
+      background: #fff;         
+      text-rendering: optimizeLegibility;
+      word-spacing: 0.05em;     
+    }
+
+   
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 700;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.05);  
+      letter-spacing: 0.3px;
+    }
+
+    #full-name {
+      font-size: 2.25rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #0d63ff, #7b61ff);
+      background-clip: text;
+      color: transparent;
+    }
+
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.6rem; border-bottom: 1px dotted #ddd; padding-bottom: 0.1em; }
+    h3 { font-size: 1.25rem; color: #333; }
+    h4, h5, h6 { font-size: 1.1rem; color: #444; }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.65;
+      text-align: justify;   
+      text-indent: 0.5em;   
+      hyphens: auto;        
+    }
+
+    em { color: #444; font-style: italic; }
+    strong { font-weight: 700; color: #000; }
+    b { font-weight: 600; }
+
+   
+    p::first-letter { font-size: 1.15em; font-weight: 600; color: #222; }
+    p::first-line  { letter-spacing: 0.02em; }
+
+
+    ::selection { background: #fde68a; color: #111; }
+
+   
+    ul, ol {
+      padding-inline-start: 1.2em; 
+      line-height: 1.5;
+    }
+    ul { list-style-type: square; } 
+    ol { list-style-type: lower-roman; }
+    ol ol { list-style-type: lower-alpha; }
+    li::marker { color: #64748b; font-weight: bold; } 
+
+   
+    a[href^="mailto:"] { font-variant: small-caps; color: #0d63ff; }
+    a[href^="tel:"]    { white-space: nowrap; color: #0077cc; }
+    a[href$=".pdf"]    { text-decoration: underline dotted; color: #5f5fff; }
+
+    a {
+      text-decoration: none;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+    a:link    { color: #0d63ff; }   /* unvisited */
+    a:visited { color: #6a4cff; }   /* visited */
+    a:hover   { color: #00319d; text-shadow: 0 1px 3px rgba(13,99,255,0.3); }
+    a:focus   { outline: 2px dashed #0d63ff; outline-offset: 3px; } /* keyboard-accessible */
+    a:active  { color: #001d66; }   /* during click */
+
+    
+    blockquote, figure, table, .badge, .tag {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #fafafa;
+      padding: 8px;
+      color: #222;
+      text-shadow: 0 0.2px 0.2px rgba(0,0,0,0.1);
+    }
+
+    
+    blockquote {
+      font-style: italic;
+      quotes: "“" "”";
+      background: #f9fafb;
+      border-left: 4px solid #7b61ff; 
+    }
+    blockquote::before {
+      content: open-quote;
+      font-size: 1.5rem;
+      color: #7b61ff;
+      vertical-align: sub;
+      margin-right: 4px;
+    }
+    blockquote::after { content: close-quote; }
+
+   
+    code, dfn, abbr {
+      font-family: monospace;
+      background: #f3f3f3;
+      padding: 0 3px;
+      border-radius: 4px;
+    }
+    
+    abbr[title]:hover::after {
+      content: " (" attr(title) ")";
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    
+    table { border-collapse: collapse; font-size: 0.95rem; color: #111; }
+    caption { caption-side: top; font-weight: 700; color: #333; text-align: left; }
+    th, td { border: 1px solid #ddd; padding: 6px 10px; }
+    th { background: #f3f4f6; font-weight: 700; text-transform: capitalize; }
+    tr:nth-child(even) td { background: #fcfcfc; }
+    tr:hover td { background: #f9fafb; } /* row hover is visual only */
+
+    
+    .badge, .tag {
+      display: inline-block;   
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      background: #eee;
+      padding: 2px 6px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      color: #333;
+      text-transform: uppercase;
+    }
+
+    
+    .section-title + p {    
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #1f2937;
+    }
+    h2 ~ p {                 
+      color: #1f2937;
+    }
+
+    
+    strong::before { content: "«"; color: #9ca3af; }
+    strong::after  { content: "»"; color: #9ca3af; }
+
+    
+    dt { font-weight: 700; color: #000; }
+    dd { font-style: italic; color: #444; padding-inline-start: 0.5em; }
+    time { color: #0d63ff; font-style: italic; }
+
+   
+    address { font-style: normal; color: #333; line-height: 1.4; }
+    address a { display: inline; }
+
+    small { font-size: 0.875rem; color: #555; }
+    mark {
+      background: #fffd91;
+      color: #111;
+      padding: 0 3px;
+      border-radius: 3px;
+    }
+
+    
+    hr { border: none; border-top: 1px solid #ddd; height: 1px; }
+
+    
+    @media print {
+      a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.875em;
+        color: #555;
+      }
+      body { color: #000; background: #fff; }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>HAKIM ALIYEV</h1>
+  <h1 id="full-name">HAKIM ALIYEV</h1>
   <p><strong>iOS Developer</strong> <small>(Student, UFAZ)</small></p>
 
   <figure>
@@ -22,12 +213,12 @@
     <a href="mailto:hakimeliyhev@icloud.com">hakimeliyhev@icloud.com</a><br />
     <a href="https://github.com/hakim-cyber">GitHub: hakim-cyber</a> |
     <a href="https://www.linkedin.com/in/hakim-aliyev">LinkedIn: Hakim Aliyev</a><br />
-    Tel: +994 50 676 17 80
+    Tel: <a href="tel:+994506761780">+994 50 676 17 80</a>
   </address>
 
   <hr />
 
-  <h2>Summary</h2>
+  <h2 class="section-title">Summary</h2>
   <p>
     <strong>Building apps that solve real problems</strong> — published <data value="4"><strong>4</strong></data> iOS apps.
     I love <b>Swift</b>, <i>AI</i>, and clean UI. <mark>Always learning &amp; improving</mark>.
@@ -57,18 +248,12 @@
   <h2>Selected Projects</h2>
   <table>
     <caption>A selection of published apps</caption>
-    <colgroup>
-      <col span="1" />
-      <col span="1" />
-      <col span="1" />
-      <col span="1" />
-    </colgroup>
     <thead>
       <tr>
-        <th scope="col">Project</th>
-        <th scope="col">Platform</th>
-        <th scope="col">Highlights</th>
-        <th scope="col">Links</th>
+        <th>Project</th>
+        <th>Platform</th>
+        <th>Highlights</th>
+        <th>Links</th>
       </tr>
     </thead>
     <tbody>
@@ -109,8 +294,7 @@
     <tfoot>
       <tr>
         <td colspan="4">
-          Note: ratings and downloads reflect App Store data as of
-          <time datetime="2025-10">Oct&nbsp;2025</time>.
+          Note: ratings and downloads reflect App Store data as of <time datetime="2025-10">Oct 2025</time>.
         </td>
       </tr>
     </tfoot>
@@ -136,14 +320,7 @@
     <li>Azerbaijani — Native</li>
   </ul>
 
-  <h2>Extras</h2>
-  <ul>
-    <li>Certificates: 3rd Degree Kepler Order (<time datetime="2018">2018</time>, Algorithmics – Game Development)</li>
-    <li>Competitions: RFO &amp; AMO Olympiads</li>
-    <li>See more: <a href="https://github.com/hakim-cyber">GitHub</a> &amp; <a href="https://www.linkedin.com/in/hakim-aliyev">LinkedIn</a></li>
-  </ul>
-
-  <h2>Career Goals</h2>
+  <h2 class="section-title">Career Goals</h2>
   <p>
     My goal is to become a <strong>senior iOS developer</strong> who creates apps that genuinely help people.
     I’m passionate about blending <i>technology</i> and <em>psychology</em> — understanding how users think,
@@ -153,18 +330,16 @@
     “The best apps aren’t just useful — they make people feel something.” — <cite>Apple Developer Guidelines</cite>
   </blockquote>
 
-  <h2>Personal Philosophy</h2>
+  <h2 class="section-title">Personal Philosophy</h2>
   <p>
     I believe in continuous learning and growth. Every project, even small, teaches something valuable.
-    My principle is simple: <q>progress over perfection</q>. 
+    My principle is simple: <q>progress over perfection</q>.
   </p>
   <p>
     <mark>Core values:</mark> curiosity, discipline, and empathy.  
     I try to code with purpose — not only to build, but to <strong>improve lives</strong>.
   </p>
 
-
-  
   <h3>Interests</h3>
   <ul>
     <li>UI/UX research, prototyping</li>
